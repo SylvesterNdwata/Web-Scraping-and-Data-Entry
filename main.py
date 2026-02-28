@@ -43,16 +43,12 @@ def main():
                 break
         accurate_prices.append("$" + num)
 
-    print(len(accurate_prices))
-
     addresses_elements = soup.find_all("address")
     addresses = [address.text.strip() for address in addresses_elements]
     accurate_addresses = ["".join(item.split("|")) for item in addresses]
-    print(len(accurate_addresses))
 
     all_links = soup.find_all("a", class_="property-card-link")
     house_links = [item.get("href") for item in all_links]
-    print(len(house_links))
 
 
     for n in range(len(accurate_prices)):
