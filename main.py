@@ -61,7 +61,7 @@ def main():
         price_input.send_keys(accurate_prices[n])
 
         link_input = wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div/div[1]/input')))
-        link_input.send_keys(house_links[n])
+        link_input.send_keys(str(house_links[n]))
 
         send_button = wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div')))
         send_button.click()
